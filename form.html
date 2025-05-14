@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./src/assets/ico/netflix_logo.ico"
+      type="image/x-icon"
+    />
+    <title>NETFLIX - Projekt</title>
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+  <body>
+    <!-- hlavička -->
+    <header class="header-subpage">
+      <a class="btn-home" href="./index.html">Úvodní strana</a>
+    </header>
+    <!-- hlavní sekce -->
+    <main class="form-form">
+      <form class="form-box">
+        <input
+          type="text"
+          id="firstname"
+          placeholder="Křestní jméno"
+          name="firstname"
+          required
+        />
+        <input
+          type="text"
+          id="lastname"
+          placeholder="Příjmení"
+          name="lastname"
+          required
+        />
+        <input
+          type="email"
+          id="email"
+          placeholder="Přihlašovací email"
+          name="email"
+          required
+        />
+        <input
+          type="password"
+          id="password"
+          placeholder="Vaše heslo"
+          name="password"
+          required
+        />
+        <input
+          type="password"
+          id="confirm-password"
+          placeholder="Heslo znovu"
+          name="confirm-password"
+          required
+        />
+        <button type="submit">Odeslat</button>
+      </form>
+    </main>
+    <!-- skript -->
+    <script src="./dist/form.js"></script>
+  </body>
+</html>

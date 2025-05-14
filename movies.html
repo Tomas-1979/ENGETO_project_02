@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./src/assets/ico/netflix_logo.ico"
+      type="image/x-icon"
+    />
+    <title>NETFLIX - Projekt</title>
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+  <body>
+    <!-- hlavička -->
+    <header class="header-subpage">
+      <a class="btn-home" href="./index.html">Úvodní strana</a>
+    </header>
+    <!-- hlavní sekce -->
+    <main>
+      <select id="movies-select">
+        <option value="" disabled selected>Vyberte možnost</option>
+        <option value="girl">Girl</option>
+        <option value="family">Family</option>
+        <option value="gun">Gun</option>
+        <option value="detective">Detective</option>
+      </select>
+
+      <div id="results"></div>
+    </main>
+    <!-- skript -->
+    <script src="./dist/movies.js"></script>
+  </body>
+</html>

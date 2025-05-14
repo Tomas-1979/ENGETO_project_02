@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./src/assets/ico/netflix_logo.ico"
+      type="image/x-icon"
+    />
+    <title>NETFLIX - Projekt</title>
+    <link rel="stylesheet" href="./src/style.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <!-- hlavička -->
+    <header class="header-main-page">
+      <img
+        class="netflix-logo"
+        src="./src/assets/img/netflix-logo.png"
+        alt="netflix-logo"
+      />
+      <a class="btn-register" href="./form.html">Registrace</a>
+    </header>
+    <!-- první sekce -->
+    <main class="main-page">
+      <section class="main-section">
+        <h1>Neomezené sledování filmů, TV pořadů a dalšího obsahu</h1>
+        <h2>Už od 239 Kč. Zrušte kdykoliv.</h2>
+        <p>
+          Jste připraveni se dívat? Pro vytvoření nebo obnovení členství zadejte
+          e&#8209;mail.
+        </p>
+        <form class="main-section-form">
+          <input
+            class="email-input"
+            type="email"
+            placeholder="E-mailová adresa"
+          />
+          <button class="btn-start" type="submit">Začít</button>
+        </form>
+      </section>
+      <!-- druhá sekce -->
+      <section class="second-section">
+        <div class="second-section-images">
+          <img src="./src/assets/img/avengers.jpg" alt="avengers-image" />
+          <img src="./src/assets/img/bugs-life.jpg" alt="bugs-life-image" />
+          <img src="./src/assets/img/thor.jpg" alt="thor-image" />
+        </div>
+        <div class="second-section-button">
+          <a class="btn-search" href="./movies.html">Najít další filmy</a>
+        </div>
+      </section>
+    </main>
+    <!-- patička -->
+    <footer>
+      <section class="footer-01">
+        <a href="#">Často kladené dotazy</a>
+        <a href="#">Vztahy s investory</a>
+        <a href="#">Jak se dívat</a>
+        <a href="#">Podnikové informace</a>
+        <a href="#">Právní oznámení</a>
+      </section>
+      <section class="footer-02">
+        <a href="#">Centrum zákaznické podpory</a>
+        <a href="#">Kariéra</a>
+        <a href="#">Podmínky používání</a>
+        <a href="#">Kontaktujte nás</a>
+        <a href="#">Uvádí jedině Netflix</a>
+      </section>
+      <section class="footer-03">
+        <a href="#">Účet</a>
+        <a href="#">Uplatněte dárkové poukazy</a>
+        <a href="#">Soukromí</a>
+        <a href="#">Test rychlosti</a>
+        <a href="#">Reklamy</a>
+      </section>
+      <section class="footer-04">
+        <a href="#">Pro média</a>
+        <a href="#">Koupit dárkové poukazy</a>
+        <a href="#">Nastavení souborů cookie</a>
+        <a href="#">Právní záruka</a>
+      </section>
+    </footer>
+    <!-- ikona nahoru -->
+    <button class="scroll-button hidden-button">
+      <i class="fa-regular fa-circle-up"></i>
+    </button>
+    <!-- skript -->
+    <script src="./dist/script.js"></script>
+  </body>
+</html>

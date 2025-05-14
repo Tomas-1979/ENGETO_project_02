@@ -1,0 +1,462 @@
+/* základní styly */
+
+:root {
+  --background-color: #000;
+  --background-color-header: hsla(0, 0%, 0%, 0.801);
+  --text-color: #fff;
+  --btn-background: rgb(214, 28, 28);
+  --btn-background-hover: rgb(210, 60, 60);
+  --btn-text: #fff;
+  --btn-text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+  --form-background: #000;
+  --form-background-focus: #fff;
+  --form-text-color: #fff;
+  --form-text-color-focus: #000;
+  --form-border: #fff;
+  --link: #ffffffb3;
+  --link-hover: #fff;
+  --border-radius-all: 2px;
+}
+
+/* reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* body a html */
+
+body,
+html {
+  height: 100vh;
+  scroll-behavior: smooth; /* ošetření plynulého scrollu */
+  background-color: var(--background-color);
+}
+
+/* ========== index.html ========== */
+
+/* hlavicka */
+
+.header-main-page {
+  height: 60px;
+  width: 100%;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  background-color: var(--background-color-header);
+}
+
+/* hlavicka - logo */
+
+.header-main-page .netflix-logo {
+  max-height: 60%;
+  width: auto;
+}
+
+/* hlavicka - tlačítko registrace */
+
+.header-main-page .btn-register {
+  padding: 7px 12px;
+  background-color: var(--btn-background);
+  color: var(--btn-text);
+  text-decoration: none;
+  border-radius: var(--border-radius-all);
+  text-shadow: var(--btn-text-shadow);
+  transition: background-color 0.2s;
+}
+
+.header-main-page .btn-register:hover {
+  background-color: var(--btn-background-hover);
+  cursor: pointer;
+}
+
+.header-main-page .btn-register:active {
+  transform: scale(0.98);
+}
+
+/* hlavní obsah */
+
+.main-page {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.7),
+      rgb(0, 0, 0)
+    ),
+    url("../src/assets/img/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* hlavní obsah - nadpis */
+
+.main-section {
+  height: 100vh;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-color);
+  text-align: center;
+}
+
+.main-section h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: bold;
+}
+
+.main-section h2 {
+  margin-top: 0.5rem;
+  font-size: clamp(1rem, 3vw, 1.4rem);
+  font-weight: 400;
+}
+
+.main-section p {
+  margin: 0.5rem 0;
+  font-size: clamp(0.8rem, 2vw, 1rem);
+}
+
+/* hlavní obsah - formulář */
+
+.main-section-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 0.5rem;
+}
+
+.main-section-form .email-input {
+  padding: 8px 10px;
+  border: 2px solid var(--form-border);
+  background-color: var(--form-background);
+  color: var(--form-text-color);
+  border-radius: var(--border-radius-all);
+  flex: 1;
+}
+
+.main-section-form .email-input:focus {
+  background-color: var(--form-background-focus);
+  color: var(--form-text-color-focus);
+  outline: none;
+}
+
+.main-section-form .btn-start {
+  padding: 8px 10px;
+  background-color: var(--btn-background);
+  color: var(--btn-text);
+  text-decoration: none;
+  border-radius: var(--border-radius-all);
+  text-shadow: var(--btn-text-shadow);
+  transition: background-color 0.2s;
+  flex: 0 0 auto;
+}
+
+.main-section-form .btn-start:hover {
+  background-color: var(--btn-background-hover);
+  cursor: pointer;
+}
+
+/* druhá sekce - galerie */
+
+.second-section {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-color);
+  padding-bottom: 2rem;
+  gap: 3rem;
+}
+.second-section-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.second-section-images img {
+  width: 300px;
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--border-radius-all);
+  transition: transform 0.2s;
+}
+
+.second-section-images img:hover {
+  cursor: pointer;
+  transform: scale(0.98);
+}
+
+/* druhá sekce - tlačítko na vyhledávání filmů */
+
+.second-section .btn-search {
+  padding: 8px 15px;
+  background-color: var(--btn-background);
+  color: var(--btn-text);
+  text-decoration: none;
+  border-radius: var(--border-radius-all);
+  text-shadow: var(--btn-text-shadow);
+  transition: background-color 0.2s;
+}
+
+.second-section .btn-search:hover {
+  background-color: var(--btn-background-hover);
+  cursor: pointer;
+}
+
+.second-section-button:active {
+  transform: scale(0.98);
+}
+
+/* patička */
+
+footer {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: row;
+  box-sizing: border-box;
+}
+
+.footer-01,
+.footer-02,
+.footer-03,
+.footer-04 {
+  display: flex;
+  max-width: 250px;
+  flex: 1 1 100%;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 0 auto;
+  padding-bottom: 1rem;
+  padding-left: 0.5rem;
+}
+
+footer a {
+  font-size: 1.1rem;
+  color: var(--link);
+}
+
+footer a:hover {
+  color: var(--link-hover);
+}
+
+/* ikona nahoru */
+
+.scroll-button {
+  border: none;
+  background-color: transparent;
+}
+
+.fa-circle-up {
+  font-size: 50px;
+  color: var(--btn-background);
+  background-color: var(--background-color);
+  border-radius: 50%;
+  padding: 10px;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 9999;
+  cursor: pointer;
+}
+
+.hidden-button {
+  display: none;
+}
+
+/* ========== form.html && movies.html ========== */
+
+/* tlačítko zpět */
+
+.header-subpage {
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+.header-subpage .btn-home {
+  padding: 7px 12px;
+  background-color: var(--btn-background);
+  color: var(--btn-text);
+  text-decoration: none;
+  border-radius: var(--border-radius-all);
+  text-shadow: var(--btn-text-shadow);
+  transition: background-color 0.2s;
+}
+
+.header-subpage .btn-home:hover {
+  background-color: var(--btn-background-hover);
+  cursor: pointer;
+}
+
+.header-subpage .btn-home:active {
+  transform: scale(0.98);
+}
+
+/* ========== form.html ========== */
+
+.form-form {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  max-width: 400px;
+}
+
+.form-box input {
+  padding: 10px;
+  border: 2px solid var(--form-border);
+  background-color: var(--form-background);
+  color: var(--form-text-color);
+  border-radius: var(--border-radius-all);
+  width: 100%;
+}
+
+.form-box input:focus {
+  outline: none;
+}
+
+.form-box button {
+  width: 100%;
+  padding: 7px 12px;
+  background-color: var(--btn-background);
+  color: var(--btn-text);
+  text-decoration: none;
+  border-radius: var(--border-radius-all);
+  text-shadow: var(--btn-text-shadow);
+  transition: background-color 0.2s;
+}
+
+.form-box button:hover {
+  background-color: var(--btn-background-hover);
+  cursor: pointer;
+}
+
+.form-box button:active {
+  transform: scale(0.98);
+}
+
+/* ========== movies.html ========== */
+
+/* select */
+
+#movies-select {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 0px;
+  font-size: 1rem;
+  background-color: var(--background-color);
+  color: #fff;
+  border: 2px solid var(--btn-background);
+  cursor: pointer;
+}
+
+#movies-select:focus,
+#movies-select:active {
+  border: 2px solid var(--btn-background);
+  outline: none;
+}
+
+#movies-select option {
+  font-size: 1rem;
+  background-color: var(--background-color);
+  color: var(--btn-text);
+}
+
+/* výsledky - grid */
+
+#results {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  padding: 2rem;
+}
+
+/* výsledky - images */
+
+#results img {
+  width: 90%;
+  height: auto;
+  object-fit: cover;
+  padding-bottom: 1.5rem;
+  border-radius: var(--border-radius-all);
+  opacity: 0;
+  transform: rotate(5deg);
+  animation: fadeIn 1s ease forwards;
+  transition: transform 0.3s ease;
+}
+
+#results img:hover {
+  transform: rotate(0deg);
+  cursor: pointer;
+}
+
+/* výsledky - animace fadeIn */
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* ========== MEDIA QUERIES ========== */
+
+/* index.html - responsivita */
+
+@media (min-width: 568px) {
+  .main-section-form {
+    flex-direction: row;
+  }
+
+  .main-section-form .email-input {
+    width: 100%;
+  }
+
+  .footer-01,
+  .footer-02,
+  .footer-03,
+  .footer-04 {
+    max-width: 45%;
+    flex: 1 1 45%;
+  }
+}
+
+@media (min-width: 950px) {
+  .footer-01,
+  .footer-02,
+  .footer-03,
+  .footer-04 {
+    max-width: 24%;
+    flex: 1 1 22%;
+  }
+}
